@@ -1,0 +1,228 @@
+#Exercice 1
+
+myTable = [2,6,12,7,42]
+varTemp = 0
+minValeur = 0
+varTemp = myTable[2]
+myTable[2] = myTable[3]
+myTable[3] = varTemp
+print(myTable)
+
+print (" ")
+print ("Exercice suivant :")
+
+#Exercice 2
+myTable = [2,6,12,7,42,9]
+
+for i in range (1,len(myTable)):
+    for n in range(0,i):
+        if myTable[i]<myTable[n]:
+            varTemp = myTable[i]
+            myTable[i] = myTable[n]
+            myTable[n] = varTemp
+        print(myTable)
+    print(myTable)
+print(myTable)
+
+print(" ")
+print("Exercice suivant:")
+
+#Exercice 4:
+    #Il est possible d'estimer la longueur du programme et le temps de calcul que cela prendra en fonction du nombre d'éléments présents dans le tableau. En effet, selon les programmes prédéfinis, l'ordinateur se concentra sur
+    #la comparaison entre les différents éléments pour les trier. Ainsi, chaque numéro de la liste sera comparé avec ceux le précédent. Par exemple, dans l'exercice précédent, on retrouve 21 fois le calcul car l'ordinateur fait 21 comparaisons.
+    #On peut calculer cela d'avance en faisant une opération mathématique, car il faudrait pour chaque valeur du tableau additionner le nombre de valeur le précédent.
+
+#Partie 2
+
+#Exercice 1
+
+lineHorizontale = "_"
+line1 = ""
+line2 = ""
+line3 = ""
+
+
+line1 = ("_"*3 + "|" + "_"*3 + "|" + "_"*3)
+line2 = line1
+line3 = (" "*3 + "|" + " "*3 + "|" + " "*3)
+
+print(line1)
+print(line2)
+print(line3)
+
+
+print(" ")
+print("Exercice suivant: Se joue directement dans le code du jeu")
+
+
+#Exercice 3
+
+lineHorizontale = "_"
+line1 = ""
+line2 = ""
+line3 = ""
+touche = ' '
+
+#Gestion des cases
+#Pour jouer, il suffit simplement pour le Joueur 1 de changer la valeur des cases (valCase) en 1 pour jouer une croix (X) ou pour le Joueur 2 en 2 pour jouer un rond (O)
+
+verifTour = 0
+case1 = "___"
+valCase1 = 0
+case2 = "___"
+valCase2 = 0
+case3 = "___"
+valCase3 = 0
+case4 = "___"
+valCase4 = 0
+case5 = "___"
+valCase5 = 0
+case6 = "___"
+valCase6 = 0
+case7 = "   "
+valCase7 = 0
+case8 = "   "
+valCase8 = 0
+case9 = "   "
+valCase9 = 0
+
+
+
+line1 = (case1 + "|" + case2 + "|" + case3)
+line2 = (case4 + "|" + case5 + "|" + case6)
+line3 = (case7 + "|" + case8 + "|" + case9)
+
+#gestion des X
+
+if (valCase1 == 1):
+    verifTour += 1
+    case1 = "_x_"
+if (valCase2 == 1):
+    verifTour += 1
+    case2 = "_x_"
+if (valCase3 == 1):
+    verifTour += 1
+    case3 = "_x_"
+
+if (valCase4 == 1):
+    verifTour += 1
+    case4 = "_x_"
+if (valCase5 == 1):
+    verifTour += 1
+    case5 = "_x_"
+if (valCase6 == 1):
+    verifTour += 1
+    case6 = "_x_"
+
+if (valCase7 == 1):
+    verifTour += 1
+    case7 = " x "
+if (valCase8 == 1):
+    verifTour += 1
+    case8 = " x "
+if (valCase9 == 1):
+    verifTour += 1
+    case9 = " x "
+
+#Gestion des O
+
+if (valCase1 == 2):
+    verifTour += 2
+    case1 = "_o_"
+if (valCase2 == 2):
+    verifTour += 2
+    case2 = "_o_"
+if (valCase3 == 2):
+    verifTour += 2
+    case3 = "_o_"
+
+if (valCase4 == 2):
+    verifTour += 2
+    case4 = "_o_"
+if (valCase5 == 2):
+    verifTour += 2
+    case5 = "_o_"
+if (valCase6 == 2):
+    verifTour += 2
+    case6 = "_o_"
+
+if (valCase7 == 2):
+    verifTour += 2
+    case7 = " o "
+if (valCase8 == 2):
+    verifTour += 2
+    case8 = " o "
+if (valCase9 == 2):
+    verifTour += 2
+    case9 = " o "
+
+line1 = (case1 + "|" + case2 + "|" + case3)
+line2 = (case4 + "|" + case5 + "|" + case6)
+line3 = (case7 + "|" + case8 + "|" + case9)
+print(line1)
+print(line2)
+print(line3)
+
+#Jouer à deux joueurs (N'est pas effectif par manque de temps)
+if verifTour == (verifTour+1):
+    print("C'est au tour du joueur 2")
+
+if verifTour == (verifTour+2):
+    print("C'est au tour du joueur 1")
+
+#Check victoire des X
+
+if (valCase1 + valCase2 + valCase3) >= 3:
+    print("C'est win!")
+if (valCase7 + valCase8 + valCase9) >= 3:
+    print("C'est win !")
+if (valCase4 + valCase5 + valCase6) >= 3:
+    print ("C'est win")
+if (valCase1 + valCase4 + valCase7) >= 3:
+    print("C'est win !")
+if (valCase3 + valCase6 + valCase9) >= 3:
+    print("C'est win")
+if (valCase2 + valCase5 + valCase8) >= 3:
+    print("C'est win")
+if (valCase1 + valCase5 + valCase9) >= 3:
+    print("C'est win !")
+if (valCase7 + valCase5 + valCase3) >= 3:
+    print("C'est win")
+
+#Check victoire des O
+
+if (valCase1 + valCase2 + valCase3) >= 6:
+    print("C'est win!")
+if (valCase7 + valCase8 + valCase9) >= 6:
+    print("C'est win !")
+if (valCase4 + valCase5 + valCase6) >= 6:
+    print ("C'est win")
+if (valCase1 + valCase4 + valCase7) >= 6:
+    print("C'est win !")
+if (valCase3 + valCase6 + valCase9) >= 6:
+    print("C'est win")
+if (valCase2 + valCase5 + valCase8) >= 6:
+    print("C'est win")
+if (valCase1 + valCase5 + valCase9) >= 6:
+    print("C'est win !")
+if (valCase7 + valCase5 + valCase3) >= 6:
+    print("C'est win")
+
+
+#Vérif que toutes les cases sont remplies
+
+if (valCase1 + valCase2 + valCase3 + valCase4 + valCase5 + valCase6 + valCase7 + valCase8 + valCase9)>=27:
+    print("Toutes les cases sont remplies, dommage !")
+
+    print(" ")
+print("Exercice suivant : Voir les commentaires du programme")
+print (" ")
+
+#Exercice 4
+#Ce qu'il manquerait pour un Puissance 4 serait donc de rajouter une case, de modifier les conditions de victoire car ici il suffit que de 3 "jetons" alignés pour garantir la victoire alors qu'à l'inverse, au Puissance 4 il en faudrait 1 de plus.
+#en outre, peut etre que modifier les noms des jetons en Jaune et Rouge serait un petit plus.
+
+
+print(" ")
+print("Exercice suivant")
+print (" ")
